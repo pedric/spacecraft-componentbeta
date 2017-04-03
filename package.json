@@ -1,0 +1,57 @@
+{
+  "name": "spacecraft",
+  "version": "0.1.16",
+  "description": "## Table of contents",
+  "license": "",
+  "author": {
+    "name": "Whitespace AB",
+    "email": "info@whitespace.se",
+    "url": "https://whitespace.se/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/%3Awhitespace_se/spacecraft.git"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "dependencies": {
+    "@frctl/fractal": "^1.1.3",
+    "@frctl/mandelbrot": "^1.1.0",
+    "@frctl/nunjucks": "^1.0.3",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "browser-sync": "^2.17.6",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-changed": "^1.3.2",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-svg-sprite": "^1.3.6",
+    "gulp-watch": "^4.3.10",
+    "lodash": "^4.17.1",
+    "lodash.merge": "^4.6.0",
+    "require-dir": "^0.3.1",
+    "spacecraft-twig": "git+ssh://git@bitbucket.org/whitespace_se/spacecraft-twig.git#0.1.16",
+    "webpack": "^1.13.3",
+    "webpack-stream": "^3.2.0",
+    "yargs": "^7.0.2"
+  },
+  "gitHead": "2a469edb7c3e968e1ec088cc7100be41231469f7",
+  "readme": "# Spacecraft\n\n## Table of contents\n\n- [Theme](#theme)\n\n## Theme\n\nConfig the template settings with the following variable:\n\n```\n\"themeSettings\": {\n  \"skin\": \"black\"\n}\n```\n\n### Styles & scripts\n\nFurther information is available here:\nhttp://fractal.build/guide/web/default-theme#configuration\n\nAdd the ```theme``` settings if you want to sync a theme folder into the build folder.\n\n```\n\"theme\": {\n  \"src\": \"_fractal\",\n  \"dest\": \"_fractal\",\n  \"override\": false\n},\n```\n\n### Production task\n\n*Available from v. 0.1.14*\n\nUse ```gulp production``` to copy files from the spacecraft project to another destination\n\nAdd the ```production``` settings to choose which tasks to run, the order to run and which folders to sync. The paths to buildfolder and destinationfolder must also be added.\n\nExample code to add in config.json in the project.\n```\n\"production\" : {\n    \"rev\": true,\n    \"assetTasks\": [\"fonts\", \"icons\", \"images\"],\n    \"codeTasks\": [\"css\", \"js\"],\n    \"folders\": [\"css\", \"js\", \"icons\", \"fonts\", \"img\"],\n    \"path\":{\n      \"src\": \"<spacecraft project build folder>\",\n      \"dest\": \"<external project target folder>\"     \n    }\n  }, \n```\n\n### Override templates\n\nOverride templates by specifying a override folder.\n\nFurther information is available here:\nhttp://fractal.build/guide/web/default-theme#template-customisation",
+  "readmeFilename": "README.md",
+  "homepage": "https://bitbucket.org/%3Awhitespace_se/spacecraft#readme",
+  "_id": "spacecraft@0.1.16",
+  "_shasum": "a03711cf2aa24434de1af01af891096f0d9a0e15",
+  "_from": "git+ssh://git@bitbucket.org/whitespace_se/spacecraft.git#0.1.16",
+  "_resolved": "git+ssh://git@bitbucket.org/whitespace_se/spacecraft.git#2a469edb7c3e968e1ec088cc7100be41231469f7"
+}
