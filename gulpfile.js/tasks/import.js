@@ -1,10 +1,18 @@
 const config		= require('../../config')
 if(!config.tasks.import) return
 
-const path		= require('path')
-const gulp		= require('gulp')
-const spacecomponents = require('spacecomponents')
-const argv 		= require('yargs').argv
+const path					= require('path')
+const gulp					= require('gulp')
+const gulpSequence  = require('gulp-sequence')
+const argv 					= require('yargs').argv
+
+
+
+const requireDir = require('require-dir')
+
+const componentsArray = [];
+
+const testComponent = require('spacecomponent_testfile')
 
 // Set searchpaths for mainTask
 
@@ -26,15 +34,15 @@ const argv 		= require('yargs').argv
 // from "gulp import --name <value>" in folder library together with
 // the file extensions given in config.json (tasks/main/extensions) 
 
-// const importTask = function() {
-// 	return gulp.src(paths.src)
-// 	.pipe(gulp.dest(paths.dest))
-// }
+const importTask = function() {
+	return gulp.src(path.join(testComponent, '/**/*' + argv.component + '*.{' + config.tasks.import.main.extensions + '}'))
+	.pipe(gulp.dest(path.join(config.tasks.import.main.dest)))
+}
 
 
 
 // jsTask is looking for files matching the value of param "name" 
-// from "gulp import --name <value>" in folder library/js_modules together
+// from "gulp import --component <value>" in folder library/js_modules together
 // with the file extensions given in config.json (tasks/js/extensions)
 
 // const importTask = function() {
@@ -43,12 +51,14 @@ const argv 		= require('yargs').argv
 // }
 
 
-const importTask = function() {
-	return gulp.src(path.join(spacecomponents, argv.component + '.html'))
-	.pipe(gulp.dest(path.join(config.root.dest, config.tasks.js.dest)))
+
+const importJs = function() {
+	return gulp.src(path.join(config.tasks.import.js.src + argv.component, '/**/*' + argv.component + '*.js'))
+	.pipe(gulp.dest(path.join(config.root.src, config.tasks.import.js.dest)))
 }
 
 
 // Init
-gulp.task('import', importTask)
+gulp.task('import', gulpSequence(importTask, importJs))
 module.exports = importTask
+
