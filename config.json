@@ -1,1 +1,24 @@
-{}
+{
+	"import": {
+    "view": {
+      "src": "view",
+      "dest": "views",
+      "extensions": ["html", "twig", "json", "md"]
+    },
+    "js": {
+      "src": "js",
+      "dest": "js/modules",
+      "extensions": ["js", ""]
+    },
+    "img": {
+      "src": "img",
+      "dest": "img",
+      "extensions": ["jpg", "jpeg", "png", "gif", "*"]
+    },
+    "icons": {
+      "src": "icons",
+      "dest": "icons",
+      "extensions": ["svg", "*"]
+    }
+  }
+}
