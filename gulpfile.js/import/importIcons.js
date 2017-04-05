@@ -4,8 +4,7 @@ if(!config.import) return
 const path					= require('path')
 const gulp					= require('gulp')
 const argv 					= require('yargs').argv
-if(argv._ != 'import') return
-const component 		= require('spacecomponent_' + argv.component)
+const component 		= require(argv.component)
 
 const importIconsTask = function() {
 	return gulp.src(path.join(component, config.import.icons.src, '/**/*.{' + config.import.icons.extensions + '}'))
