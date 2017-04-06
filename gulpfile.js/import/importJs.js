@@ -4,6 +4,7 @@ if(!config.import) return
 const path					= require('path')
 const gulp					= require('gulp')
 const argv 					= require('yargs').argv
+if(argv._ != 'import') return
 const component 		= require(argv.component)
 
 const importJsTask = function() {

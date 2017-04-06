@@ -3,7 +3,7 @@
     "view": {
       "src": "view",
       "dest": "views",
-      "extensions": ["html", "twig", "json", "md"]
+      "extensions": ["html", "twig", "json", "md", "scss", "css"]
     },
     "js": {
       "src": "js",
