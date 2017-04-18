@@ -5,7 +5,7 @@ for the different files in the spacecraft-starter. To add a
 component to your project, first install it and then run the 
 import task to get the files into the project directory as follows:
 
-npm install --save-dev spacecomponent_<componentname>
+npm install --save-dev spacecomponent_< componentname >
 
 gulp import --component <componentname>
 
