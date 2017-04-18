@@ -18,3 +18,8 @@ To get the styles synked, remember to do the import!
 in
 
 src/scss/components/_components.main.scss
+
+```
+// Import tasks
+requireDir('../import', { recurse: true })
+``

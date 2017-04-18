@@ -16,6 +16,7 @@ module.exports = function extendTasks(gulp, tasks) {
 
   // Fractal
   requireDir('../fractal', { recurse: true })
-  // Import
+  
+  // Import tasks
   requireDir('../import', { recurse: true })
 }
