@@ -3,10 +3,10 @@
 ## Table of contents
 
 - [Theme](#theme)
-- [Styles & scripts](#Styles&scripts)
-- [Production task](#Productiontask)
-- [Override templates](#Overridetemplates)
-- [Import components](#Importcomponents)
+- [Styles & scripts](#styles--scripts)
+- [Production task](#production-task)
+- [Override templates](#override-templates)
+- [Import components](#import-components)
 
 ## Theme
 
