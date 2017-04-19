@@ -1,5 +1,5 @@
 # Spacecraft (projectversion)
-*This projectversion is extended with the tasks to support import of components in the [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit)*
+*This projectversion is extended with the tasks to support import of components in the [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit).*
 
 ## Table of contents
 
